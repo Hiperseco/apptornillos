@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiperseco/Tornillos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="img/fab.ico" type="image / x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav id="nav">
+
+
+
+
+            <div class="logo">
+                <img id="logoimg" class="imagotipohs" src="img/Imagotipo%20Hiperseco%20Az%C3%BAl%20F%20Transparente.png" alt="">
+
+
+            </div>
+
+            <div class="option">
+
+                <div id="search" class="search">
+
+                    <input id="filter" type="text" placeholder="BUSCAR">
+                    <div id="iSearch" class="btnSearch">
+                        <i id="iconSearch" class="fas fa-search"></i>
+
+                    </div>
+
+
+                </div>
+
+                <div id="btnPlus" class="btnPlus">
+
+                    <i id="btnPlusI" class="fas fa-history"></i>
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <div class="conteiner">
+
+
+        <ul id="cardCont" class="cards">
+
+
+
+        </ul>
+
+
+    </div>
+
+
+    <div id="lista" class="lista">
+
+        <div class="listaErace">
+
+            <div id="btnErace" class="btnErace">
+                <i id="btnEraceI" class="far fa-trash-alt"></i>
+            </div>
+
+
+        </div>
+
+
+        <ul id="listUl">
+
+        </ul>
+
+    </div>
+
+
+    <div style="display: none" class="newart">
+
+        <h3>
+            Solicitud para agregar un nuevo articulo
+        </h3>
+
+        <form action="mail.php" method="post">
+
+            <input name="cod" type="text" placeholder="COD (opcional)">
+            <input name="nombre" required type="text" placeholder="Nombre del articulo">
+            <input name="peso" required type="text" placeholder="Peso x 100 u.">
+            <input name="url" type="text" placeholder="Url Imagen (opcional)">
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
+
+
+    <footer id="footer">
+
+        <div class="check">
+           <spam id="invert">Cantidad</spam>
+            <input class="cheked" type="checkbox">
+        </div>
+
+
+        <img src="img/4-%20Tel.svg" alt="">
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body></html>

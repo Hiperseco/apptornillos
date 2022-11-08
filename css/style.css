@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+overflow-y: scroll;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: auto;
+    position: relative;
+    background: #eee;
+    transition: background 0.5s
+    
+}
+
+.darkBody{
+    background: #555;
+}
+
+::selection{ display: none}
+
+:root {
+
+
+    --colorA: #fad419;
+    --colorB: #002954;
+    --colorG: #666666;
+    --colorN: #f2b600;
+
+
+}
+
+
+
+.swal-content__input,
+.swal-content__textarea {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: none;
+    font-size: 15px;
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    border-bottom: 3px solid orange;
+    transition: border-color .2s;
+    text-align: center;
+    color: var(--colorG);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.swal-content {
+    padding: 0 30px;
+    margin-top: 0px;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+
+.swal-content__input:focus,
+.swal-content__textarea:focus {
+    outline: none;
+    border-bottom: 3px solid var(--colorN);
+}
+
+.swal-modal {
+}
+
+.swal-title {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--colorG);
+    font-weight: 500;
+
+}
+
+.swal-text {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--colorG);
+    font-weight: 500;
+}
+
+.swal-button {
+
+    background-color: var(--colorN);
+    outline: none;
+
+}
+
+.swal-button:not([disabled]):hover {
+    background-color: orange
+}
+
+.swal-button:active {
+    background-color: orange;
+    outline: none;
+}
+
+.swal-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.swal-button[disabled] {
+    opacity: .5;
+    cursor: default
+}
+
+.swal-button::-moz-focus-inner {
+    border: 0
+}
+
+
+header {
+    width: 100%;
+    height: 80px;
+    background: var(--colorA);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 2px 2px 10px 2px rgba(120, 120, 120, 0.34);
+    top: 0;
+    z-index: 10000000000;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000000
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+
+}
+
+.logo img {
+    cursor: pointer;
+    height: 100%;
+    transition: all 1s;
+    width: 300px;
+    object-fit: cover;
+    object-position: left;
+    user-select: none;
+
+}
+
+
+
+
+.option {
+    margin-right: 28px;
+    display: flex;
+    position: relative;
+}
+
+.search {
+    width: auto;
+    height: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s
+}
+
+
+.search input {
+    width: 180px;
+    height: 100%;
+    border: none;
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    transition: all 0.5s
+}
+
+.search input:focus {
+    width: 300px
+}
+
+::placeholder {
+
+    font-weight: 500
+}
+
+input:focus {
+    border: none;
+    outline: none;
+
+}
+
+.search .btnSearch {
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: var(--colorB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer
+}
+
+.btnSearch i,
+.btnPlus i {
+    color: var(--colorA);
+    
+    
+}
+
+
+#btnPlusI{
+    transition: all 0.5s;
+    
+}
+.btnPlus {
+    width: 35px;
+    height: 35px;
+    background: var(--colorB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10000;
+    margin-left: 10px;
+    position: relative;
+
+}
+.btnPlus p{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--colorA);
+    padding: 0 8px 0 0;
+    font-weight: 500;
+    
+}
+
+
+.btnplusClick{
+    transform: rotate(-360deg)
+}
+
+
+
+.conteiner {
+    padding: 80px 30px 80px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 50px 0 0;
+
+
+
+}
+
+
+
+
+.cards {
+    width: 100%;
+
+    height: auto;
+    /*        cambiar el heigt*/
+    /*        background: blue;*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+
+}
+
+li {
+    list-style: none;
+}
+
+.card {
+    width: 150px;
+    height: 170px;
+    margin: 24px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+/*    border: solid 3px var(--colorG);*/
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 10px 2px rgba(95, 95, 95, 0.49);
+    background: white;
+
+}
+
+/*
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 15px 2px #b4b4b4;
+        }
+*/
+
+.card:hover > img {
+    padding: 2px;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+    transition: all 0.2s;
+
+
+}
+
+.card p {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    padding: 0 5px;
+/*    background: var(--colorG);*/
+    width: 100%;
+    color: var(--colorG);
+/*    outline: 1px solid var(--colorG);*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500
+}
+
+
+
+.lista{
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    background: var(--colorG);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+/*    padding-right: 50px;*/
+/*    display: none;*/
+    
+    overflow:auto;
+    transition: all 0.5s;
+    flex-wrap: wrap;
+}
+
+.listaErace{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.btnErace{
+        width:35px;
+    height: 35px;
+    background: var(--colorB);
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+}
+
+
+
+.btnErace i{
+/*    color: var(--colorA);*/
+    color: var(--colorA);
+    text-align: center;
+    padding: 12px
+}
+
+.btnErace:hover > .btnErace i{
+    background: red;
+    color: red
+}
+
+.lista ul{
+ display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    text-align: end;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-top: 50px;
+    
+    
+}
+.lista ul li{
+    padding: 10px 5px;
+    color: white
+}
+
+.none {
+    display: none;
+
+}
+.block{
+    display: block;
+}
+
+.flex{
+    height: 100%;
+    padding-top: 100px;
+}
+
+
+
+
+
+.newart{
+    width: 100%;
+    height: auto;
+    background: var(--colorG);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+/*    flex-direction: column;*/
+    padding: 30px 0
+}
+
+.newart h3{
+    width: 250px;
+    color: var(--colorN);
+    padding: 20px;
+    font-size: 24px;
+}
+
+.newart form{
+    width: 250px;
+    padding: 20px;
+}
+
+form input{
+    padding: 5px 0;
+    margin: 5px;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: solid 3px var(--colorN);
+    width: 100%;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+
+
+
+form input:focus{
+    border-bottom: solid 3px orange;
+    padding-left: 10px;
+    
+}
+
+
+
+form input::placeholder{
+    color: #dddddd;
+}
+
+form button{
+    padding: 10px 0;
+    margin: 25px 5px 10px ;
+    background: var(--colorN);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;    
+    font-size: 14px
+}
+
+
+
+
+footer {
+    width: 100%;
+    height: 40px;
+    background: var(--colorG);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    left: 0;
+    transition: all .5s
+
+}
+
+.footerN{
+    background: orange;
+}
+.navG{
+    background: var(--colorB)
+}
+
+.check{
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cheked{
+    -webkit-appearance: none;
+    width: 50px;
+    height: 25px;
+    background: var(--colorN);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.cheked:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    transition: all 0.5s;
+    
+}
+
+.check spam{
+    color: white;
+    margin-right: 15px;
+    font-weight: 500
+}
+
+.cheked:checked{
+    background: #eee;
+}
+
+.cheked:checked:before{
+    left: 25px;
+    background: Var(--colorN)
+}
+
+footer p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+
+}
+
+footer img {
+    display: none;
+    height: 90%;
+    right: 0;
+    position: absolute;
+    padding: 5px 10px;
+}
+
+.lista::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+/*    display: none;   Ocultar scroll */
+    background: var(--colorG);
+    display: none
+    
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+::-webkit-scrollbar-thumb {
+    background: var(--colorN);
+    border-radius: 4px;
+    
+    
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: orange;
+/*    box-shadow: 0 0 3px 12px rgba(0, 0, 0, 0.46);*/
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+    background: var(--colorN);
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+::-webkit-scrollbar-track {
+    background: var (--colorB);
+    border-radius: 35px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background:  var (--colorB);
+}
+
+
+::-webkit-scrollbar-button{
+    display: none;
+}
+
+
+
+@media screen and (max-width:1000px) {
+
+
+
+    .option {
+        margin-right: 30px;
+        display: flex;
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+
+    .logo img {
+
+        width: 67px;
+        object-fit: cover;
+        object-position: left;
+       
+
+    }
+
+    .card {
+        margin: 12px;
+
+    }
+
+    .conteiner {
+        padding: 140px 8px 30px;
+        margin: 0 0 50px
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    
+
+    .search input:focus {
+        width: 200px
+    }
+
+    .newart{
+        flex-direction: column;
+        height: calc(100vh - 80px);
+    }
+    .newart h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:350px) {
+
+    .option {
+        display: none
+    }
+
+
+}
